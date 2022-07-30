@@ -1,0 +1,86 @@
+body {
+    width: 100%;
+    list-style: none;
+    height: auto;
+    text-decoration: none;
+    text-align: center;
+}
+
+h2 {
+    
+    font-size: 40px;
+}
+
+.form {
+   width: 100%;
+   margin:0 auto;
+   border: 1px solid #9c9c9c;
+   padding: 75px;
+   box-sizing: border-box;
+}
+
+.item{
+    margin-bottom: 20px;
+  }
+
+.label_left {
+    display: inline-block;
+    text-align: start;
+    width:10%;
+    border-left: solid 5px #5250e0;
+    padding-left: 2vw;
+    vertical-align:top;
+}
+
+.form input[type="text"]{
+    padding: 10px;
+    width: 50%;
+}
+
+.form textarea{
+    padding: 10px;
+    height: 100px;
+    font-size: 14px;
+    width: 50%;
+}
+
+.public {
+    margin-top: 40px;
+}
+
+.btns {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.form input[type="submit"], .form input[type="reset"], a {
+    background: #5250e0;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border: solid 1px #5250e0;
+    border-radius: 5px;;
+    padding: 10px 10px;
+    margin: 0 5px;
+}
+
+/* 画面サイズ480px以下のとき */
+@media screen and (max-width: 480px){
+    /* .from {
+        border: none;
+    } */
+
+    .label_left {
+        display: block;
+        margin: auto;
+        border: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    input[type="text"], .form textarea{
+        width:50vw;
+    }
+}

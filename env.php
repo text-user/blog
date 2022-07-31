@@ -1,6 +1,22 @@
 <?php
-define('DB_NAME', 'blog_app');
-define('DB_HOST', 'localhost');
-define('DB_USER', 'root');
-define('DB_PASS', 'root');
+// manpで作成したdb情報
+// define('DB_NAME', 'blog_app');
+// define('DB_HOST', 'localhost');
+// define('DB_USER', 'root');
+// define('DB_PASS', 'root');
+// ここまで
+
+
+// heroku用の情報
+$url = parse_url(getenv("
+mysql://b7d1a928bfb1bb:e940d97c@us-cdbr-east-06.cleardb.net/heroku_028664bd7b01fd4?reconnect=true
+"));
+
+define('DB_NAME', substr($url['path'], 1));
+define('DB_HOST', $url['host']);
+define('DB_USER', $url['user']);
+define('DB_PASS', $url['pass']);
+// ここまで
+
+
 ?>
